@@ -3,14 +3,14 @@ module.exports = {
     "username": "root",
     "password": "root",
     "database": "Picorestdb",
-    "host": "postgresql-asymmetrical-72193",
+    "host": process.env.DATABASE_URL,
     "dialect": "postgres",
   },
   "test": {
     "username": "root",
     "password": "root",
     "database": "picorestdb",
-    "host": "postgresql-asymmetrical-72193",
+    "host": process.env.DATABASE_URL,
     "dialect": "postgres",
   },
   "production": {
