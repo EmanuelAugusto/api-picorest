@@ -1,10 +1,10 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "Picorestdb",
-    "host": process.env.DATABASE_URL,
-    "dialect": "postgres",
+    "password": "",
+    "database": "picorestdb",
+    "host": "localhost",
+    "dialect": "mariadb",
   },
   "test": {
     "username": "root",
