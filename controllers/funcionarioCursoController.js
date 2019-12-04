@@ -43,6 +43,7 @@ module.exports = {
                 })
     
                 res.json(funcionarioFiltrado);
+                res.sendStatus(200);
             }
             catch(error){
                 res.sendStatus(400)

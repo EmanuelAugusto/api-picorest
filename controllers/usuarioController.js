@@ -43,9 +43,13 @@ module.exports = {
         }
     },
     findByPk: async(req,res)=>{
+        var usuario =  [];
         try{
             let result = await db.usuario.findByPk(req.params.id)
-            res.json(result)
+            usuario.push({id: result.id,
+                          nome: result.nome 
+                      })
+            res.json(usuario)
 
         }catch(error){
             res.sendStatus(400)

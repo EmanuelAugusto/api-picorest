@@ -85,5 +85,10 @@ module.exports = function(app){
     .get(usuarioController.findByPk)
     .put(usuarioController.update)
     .delete(usuarioController.delete);
+
+    var authController = require('../controllers/authController')
+
+    app.route('/authUser')
+    .post(authController.findAll);
     
     }

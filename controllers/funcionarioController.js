@@ -1,4 +1,5 @@
 let db = require("../models")
+var funcionarioFiltrado = [];
 
 module.exports = {
 
@@ -49,10 +50,12 @@ module.exports = {
 
 
     findAll:async (req,res)=>{
+
         try{
             let funcionario = await db.funcionario.sequelize.query('SELECT u.nome, s.descricao AS setor, f.descricao AS funcao, fr.matricula, fc.comprovante, c.descricao AS curso FROM usuarios AS u INNER JOIN funcionarios AS fr ON u.id = fr.usuarioId INNER JOIN setors AS s ON s.id = fr.setorId INNER JOIN funcaos AS f ON f.id = fr.funcaoId INNER JOIN funcionarioCursos AS fc ON fr.id = fc.funcionarioId INNER JOIN cursos AS c ON c.id = fc.cursoId WHERE u.id = :userId ',
             { replacements: { userId: req.body.usuarioId  }, type: db.funcionario.sequelize.QueryTypes.SELECT }
             )
+            console.log('estou aqui')
             res.json(funcionario)
         }
         catch(error){
@@ -112,6 +115,7 @@ module.exports = {
 
        
     findByPk: async(req,res)=>{
+        var funcionarioResult = [];
         try{
             let result = await db.funcionario.findByPk(req.params.id,{attributes:['id','matricula','cpf','ctps','admissao','demissao','sexo','numero','logradouro','bairro','cidade','uf'],
             include: 
@@ -148,7 +152,24 @@ module.exports = {
             ]
             
             })
-            res.json(result)
+
+                funcionarioResult.push({id: result.id,
+                                        matricula: result.matricula,
+                                        cpf: result.cpf,
+                                        ctps: result.ctps,
+                                        admissao: result.admissao,
+                                        demissao: result.demissao,
+                                        sexo: result.sexo,
+                                        numero: result.numero,
+                                        logradouro: result.logradouro,
+                                        bairro: result.bairro,
+                                        cidade: result.cidade,
+                                        uf: result.uf
+                                    });
+            
+
+
+            res.json(funcionarioResult);
 
         }catch(error){
             res.sendStatus(400)
