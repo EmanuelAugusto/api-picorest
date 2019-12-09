@@ -4,7 +4,7 @@ var funcionarioFiltrado = [];
 module.exports = {
 
     
-    /*findAll:async (req,res)=>{
+    findAll:async (req,res)=>{
         var funcionarioFiltrado = [];
             try{
                 let funcionario = await db.funcionario.findAll({
@@ -46,9 +46,9 @@ module.exports = {
             catch(error){
                 res.sendStatus(400)
             }
-        },*/
+        },
 
-
+/*
     findAll:async (req,res)=>{
 
         try{
@@ -63,7 +63,7 @@ module.exports = {
             res.sendStatus(400)
         }
     },
-
+*/
 
 
 //     sequelize.query('SELECT * FROM users WHERE name LIKE :search_name ',

@@ -16,7 +16,7 @@ routes(app)// registrano a rota. Então podemos usar o app em routes
 
 app.listen(porta,()=>{
 
-    console.log("Tudo OK!")
+    console.log("Tudo OK!" + porta)
 
 })
 
