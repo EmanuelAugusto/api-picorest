@@ -154,17 +154,23 @@ module.exports = {
             })
 
                 funcionarioResult.push({id: result.id,
-                                        matricula: result.matricula,
-                                        cpf: result.cpf,
-                                        ctps: result.ctps,
-                                        admissao: result.admissao,
-                                        demissao: result.demissao,
-                                        sexo: result.sexo,
-                                        numero: result.numero,
-                                        logradouro: result.logradouro,
-                                        bairro: result.bairro,
-                                        cidade: result.cidade,
-                                        uf: result.uf
+                                       nome: result.usuario.nome,
+                                       idUsuario: result.usuario.id,
+                                       matricula: result.matricula,
+                                       cpf: result.cpf,
+                                       ctps: result.ctps,
+                                       admissao: result.admissao,
+                                       demissao: result.demissao,
+                                       sexo: result.sexo,
+                                       numero: result.numero,
+                                       logradouro: result.logradouro,
+                                       bairro: result.bairro,
+                                       cidade: result.cidade,
+                                       uf: result.uf,
+                                       setorId: result.setor.id,
+                                       setorNome: result.setor.descricao,
+                                       funcaoId: result.funcao.id,
+                                       funcaoNome: result.funcao.descricao
                                     });
             
 

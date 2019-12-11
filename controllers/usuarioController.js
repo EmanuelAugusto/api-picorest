@@ -47,7 +47,9 @@ module.exports = {
         try{
             let result = await db.usuario.findByPk(req.params.id)
             usuario.push({id: result.id,
-                          nome: result.nome 
+                          nome: result.nome,
+                          email: result.email,
+                          senha: result.passWorld
                       })
             res.json(usuario)
 

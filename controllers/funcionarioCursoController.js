@@ -33,7 +33,7 @@ module.exports = {
                  })
                 funcionariocurso.forEach(funcionarioCurso => {
                     funcionarioFiltrado.push({
-                        id: funcionarioCurso.id,
+                        id: funcionarioCurso.funcionario.id,
                         nome: funcionarioCurso.funcionario.usuario.nome,
                         setor: funcionarioCurso.funcionario.setor.descricao,
                         funcao: funcionarioCurso.funcionario.funcao.descricao,
