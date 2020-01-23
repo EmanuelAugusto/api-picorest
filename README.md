@@ -254,3 +254,8 @@ https://sequelize.org/master/manual/migrations.html#creating-first-model--and-mi
 https://medium.com/@rogeriothe_48115/relacionamentos-com-sequelize-guia-final-2b3baf21b2a1
 https://blog.rocketseat.com.br/nodejs-express-sequelize/
 https://stackoverflow.com/questions/21949554/how-do-sequelize-getter-and-setters-work
+
+
+## Academia Ficr
+
+Alterando o readme
