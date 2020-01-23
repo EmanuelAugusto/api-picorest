@@ -1,3 +1,4 @@
+ola mundo
 mkdir api
 
 npm init -y(create the project)
